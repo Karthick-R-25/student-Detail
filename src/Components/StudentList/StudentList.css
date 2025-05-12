@@ -1,0 +1,13 @@
+.student-table {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+.student-table th,
+.student-table td {
+  border: none;
+  padding: 8px;
+  text-align: left;
+}

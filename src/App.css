@@ -18,6 +18,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
@@ -26,6 +27,48 @@
 
 .App-link {
   color: #61dafb;
+}
+.container{
+  display: flex;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  
+  border-radius: 2rem;
+  overflow: hidden;
+}
+.Dashboard{
+  background-color: #54585f11;
+  height: 39rem;
+  padding-top: 3rem;
+}
+.Dashboard ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  
+  align-items: start;
+}
+.Dashboard ul li{
+  padding: 0.5rem 1rem;
+  margin: 0.25rem 0; 
+  width: 9rem;
+  margin-right: 2rem;
+  padding-right: 1rem;
+}
+ .Dashboard ul li:hover{
+  background-color: #27282c2b;
+  margin-top: 1rem;
+  
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  border-radius: 3rem;
+}
+.components{
+  width: 100%;
+  justify-items: center;
+  background-color:#27282c2b ;
 }
 
 @keyframes App-logo-spin {
