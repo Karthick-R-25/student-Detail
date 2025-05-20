@@ -1,5 +1,5 @@
 import React,{useState,useEffect, useRef} from "react";
-
+import { useNavigate } from "react-router-dom";
 import { Register } from "../../Api";
 import '../Dashboard/Addstudent.css'
 import { setError } from "../../slices/studentSlice";
@@ -12,7 +12,7 @@ function Signup(){
     const passwordRef=useRef()
     const[message,setMessage]=useState('')
     const[imperror,setImpError]=useState('')
-    
+    const Navigate=useNavigate()
    const handleSignup=async(e)=>{
           e.preventDefault()
           let email=emailRef.current.value
@@ -29,6 +29,7 @@ function Signup(){
     .replace(/_/g, ' ')
     .replace(/^\w/, c => c.toUpperCase());
            setImpError(data)
+           Navigate("/student-Detail")
            console.log(imperror)
          }
          else{
