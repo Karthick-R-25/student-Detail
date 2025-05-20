@@ -31,9 +31,9 @@ function App() {
       <div className='components'>
      
       <Routes>
-     <Route path='/student-Detail' element={<StudentList/>}  />
+    
         
-     <Route path='/student-Detail/'  element={isAuthentiction()?<StudentList />:<Signin/>}/>
+     <Route path='/student-Detail'  element={isAuthentiction()?<StudentList />:<Signin/>}/>
 
       <Route path='/AddStudent'  element={isAuthentiction()?<AddStudent />:<Signin />}/>
        <Route path='/signup'  element={<Signup />}/>
