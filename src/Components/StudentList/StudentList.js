@@ -56,7 +56,7 @@ const   handleSearch=(e)=>{
   console.log(isAuthentiction())
   
   if(!isAuthentiction()){
-       Navigate('/signin/Home')
+       Navigate('/signin/Student-Detail')
     }
 
   if (loading) return <p>Loading students...</p>;
