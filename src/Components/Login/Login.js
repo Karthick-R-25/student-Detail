@@ -11,7 +11,7 @@ function Signin(){
     const passwordRef=useRef()
     const[signed,setSigned]=useState('Login')
     const Navigate=useNavigate()
-    const{ action }=useParams()
+    const{ action="student-Detail" }=useParams()
    const handleSignIn=async(e)=>{
          e.preventDefault()
          setLogError('')
