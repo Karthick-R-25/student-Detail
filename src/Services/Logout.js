@@ -9,7 +9,7 @@ const Logout = () => {
     if (isAuthentiction()) {
       localStorage.removeItem("idToken");
     }
-    navigate('/signin/Home');
+    navigate('/signin/student-Detail');
   }, [navigate]);
 
   return null;

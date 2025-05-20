@@ -11,19 +11,6 @@ export const isAuthentiction=()=>{
         return false
     }
 }
-const Logout = () => {
-  const navigate = useNavigate();
 
-  useEffect(() => {
-    if (isAuthentiction()) {
-      localStorage.removeItem("idToken");
-    }
-    navigate('/signin/Home');
-  }, [navigate]);
 
-  return null;
- 
-};
-
-export default Logout
 
