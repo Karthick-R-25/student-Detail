@@ -37,6 +37,9 @@
   border-radius: 2rem;
   overflow: hidden;
 }
+.home:hover{
+      cursor: pointer;
+}
 .Dashboard{
   background-color: #54585f11;
   height: 39rem;
@@ -68,7 +71,7 @@
 .components{
   width: 100%;
   justify-items: center;
-  background-color:#27282c2b ;
+  background-color:#c5eded ;
 }
 
 @keyframes App-logo-spin {

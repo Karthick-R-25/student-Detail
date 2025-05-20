@@ -1,13 +1,40 @@
 .student-table {
-  border: none;
-  border-collapse: collapse;
-  width: 100%;
   
+  border-collapse: collapse;
+  margin-top: 20px;
+ 
+  background-color:transparent;
+ 
 }
 
 .student-table th,
 .student-table td {
   border: none;
-  padding: 8px;
+  padding: 8px 12px;
   text-align: left;
+}
+.student-list{
+  width: 90%;
+  margin-left: 4rem;
+}
+
+.student-table tr {
+ 
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.059); 
+}
+.feature{
+  display: flex;
+  width: 100%;
+}
+.feature select{
+  position: fixed;
+  right: 3rem;
+  top: 3.5rem;
+}
+.feature input{
+  height: 2rem;
+  align-self: center;
+  outline: none;
+  margin-left: 3rem;
+  font-size: 15px;
 }

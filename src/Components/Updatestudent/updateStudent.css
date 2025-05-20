@@ -1,0 +1,53 @@
+.student-table {
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+.student-list{
+    width: 100%;
+}
+
+.student-table th,
+.student-table td {
+  border: none;
+  padding: 8px;
+  text-align: left;
+}
+.adder{
+     background-color: rgb(149, 174, 174);
+     margin-top: 4rem;
+     width: 35rem;
+     border-radius: 3rem;
+
+    
+}
+.adder form{
+      display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+     
+     padding-top: 2rem;
+     
+   
+}
+.adder form input{
+    width: 15rem;
+    align-self: center;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+   
+}
+
+.adder form button{
+    width: 5rem;
+    height: 2.5rem;
+    align-self: center;
+    border: none;
+    background-color: rgba(54, 226, 54, 0.862);
+    color: black;
+   font-style: italic;
+  
+}

@@ -1,5 +1,6 @@
-// Key to use in LocalStorage
+import axiosClient from "./axiosclient";
 const STORAGE_KEY = 'studentData';
+
 
 // Load students from LocalStorage or fallback to initial data
 let students = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [
@@ -26,15 +27,17 @@ export const fetchStudentsAPI = () => {
 
 // Add a student
 export const addStudentAPI = (student) => {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      const newStudent = { ...student, id: Date.now() };
+      const lastId = students.length > 0 ? Math.max(...students.map(s => s.id)) : 0;
+      const newStudent = { ...student, id: lastId + 1 };
       students.push(newStudent);
       saveToStorage();
       resolve(newStudent);
     }, 500);
   });
 };
+
 
 // Update a student
 export const updateStudentAPI = (updated) => {
@@ -57,3 +60,26 @@ export const deleteStudentAPI = (id) => {
     }, 500);
   });
 };
+
+
+export const  Register=async(data)=>{
+       
+       try{  
+       const Registering= await axiosClient.post('accounts:signUp?key=AIzaSyA9KmcTpi5QyZTrXMGlIEhJ7Kg4OjwqP2E',data)
+       localStorage.setItem('idToken',Registering.data.idToken)
+       return Registering}
+       catch(err){
+        
+        return {error:err.response.data.error.message}
+       }
+}
+export const Login=async(data)=>{
+     try{
+      const response=await axiosClient.post('accounts:signInWithPassword?key=AIzaSyA9KmcTpi5QyZTrXMGlIEhJ7Kg4OjwqP2E',data)
+       localStorage.setItem('idToken',response.data.idToken)
+      return response
+     }
+     catch(err){
+       return {error:err.response.data.error.message}
+     }
+}
