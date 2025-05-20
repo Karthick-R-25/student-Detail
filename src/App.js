@@ -18,7 +18,7 @@ function App() {
     <div className="App">
       <div className='container'>
         <div className='Dashboard'>
-          <h4 className='home' onClick={()=>{isAuthentiction()?navigated('/Home'):navigated('/signin/Home')}}>Home</h4>
+          <h4 className='home' onClick={()=>{isAuthentiction()?navigated('/student-Detail'):navigated('/signin/student-Detail')}}>Home</h4>
 
           <ul >
             <li onClick={()=>{isAuthentiction()?navigated('/AddStudent'):navigated('/signin/AddStudent')}}>Add Student</li>
@@ -33,7 +33,7 @@ function App() {
       <Routes>
      <Route path='/' element={<StudentList/>}  />
         
-     <Route path='/Home'  element={isAuthentiction()?<StudentList />:<Signin/>}/>
+     <Route path='/student-Detail'  element={isAuthentiction()?<StudentList />:<Signin/>}/>
 
       <Route path='/AddStudent'  element={isAuthentiction()?<AddStudent />:<Signin />}/>
        <Route path='/signup'  element={<Signup />}/>
